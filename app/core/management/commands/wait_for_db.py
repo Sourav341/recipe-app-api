@@ -1,5 +1,5 @@
 import time
-from typing import Any, Optional
+from typing import Any
 
 from django.db import connections
 from django.db.utils import OperationalError
