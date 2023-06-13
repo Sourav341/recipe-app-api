@@ -1,4 +1,4 @@
-FROM python:3.11-alpine3.15
+FROM python:3.7-alpine
 LABEL MAINTAINER "Sourav" 
 
 ENV PYTHONUNBUFFERED 1

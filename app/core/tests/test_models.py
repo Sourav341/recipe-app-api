@@ -6,7 +6,7 @@ from core import models
 
 def sample_user(email='rajsourav.singh58@gmail.com', password='testpass'):
     """Create a sample user"""
-    return get_user_model().objects.create_user(email, password) # type: ignore
+    return get_user_model().objects.create_user(email, password) 
 
 
 class ModelTests(TestCase):
@@ -15,7 +15,7 @@ class ModelTests(TestCase):
         """Test creating a new user with an email is successfull"""
         email = 'rajkingpin910@gmail.com'
         password = 'Testpass123'
-        user = get_user_model().objects.create_user( # type: ignore
+        user = get_user_model().objects.create_user( 
             email=email,
             password=password
         )
@@ -26,14 +26,14 @@ class ModelTests(TestCase):
     def test_new_user_email_normalized(self):
         """Test the email for a new user is normalized"""
         email = 'rajkingpin910@GMAIL.COM'
-        user = get_user_model().objects.create_user(email, 'test123')  # type: ignore
+        user = get_user_model().objects.create_user(email, 'test123')  
         
         self.assertEqual(user.email, email.lower())
 
     def test_new_user_invalid_email(self):
         """Test creating user with no email raises error"""
         with self.assertRaises(ValueError):
-            get_user_model().objects.create_user(None, 'test123') # type: ignore
+            get_user_model().objects.create_user(None, 'test123') 
 
     def test_create_new_superuser(self):
         """Test creating a new SuperUser"""
@@ -47,7 +47,7 @@ class ModelTests(TestCase):
 
     def test_tag_str(self):
         """Test the tag string representation"""
-        tag = models.Tag.objects.create( # type: ignore
+        tag = models.Tag.objects.create( 
             user=sample_user(),
             name='Vegan'
         )
@@ -56,8 +56,7 @@ class ModelTests(TestCase):
 
     def test_ingredient_str(self):
         """Test the ingredient string representation"""
-        ingredient = models.Ingredient.objects.create( # type: ignore
-            user=sample_user(),
+        ingredient = models.Ingredient.objects.create( user=sample_user(),
             name='Cucumber'
         )
 
