@@ -32,7 +32,7 @@ Recipe api source code
   8. install Pillow for handle image objects.
   9. Run all the Command in Bash.
 
-## Command like code to Start or Run Unit tests.
+## Command line code to Start or Run Unit tests.
 
  1. Create a New repository in github account.
  2. Clone that github repository to our local desktop.
